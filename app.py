@@ -83,20 +83,21 @@ def main():
       
 # predict the target from all the input features
        prediction = model.predict(pred_arr)
-
-if prediction == 0:
-   st.write(f"The severity prediction is fatal injury⚠")
-elif prediction == 1:
-   st.write(f"The severity prediction is serious injury")
-else:
-   st.write(f"The severity prediction is slight injury")
-
-st.write("Developed By: Avi kumar Talaviya")
-st.markdown("""Reach out to me on: [Twitter](https://twitter.com/avikumart_) |
-[Linkedin](https://www.linkedin.com/in/avi-kumar-talaviya-739153147/) |
-[Kaggle](https://www.kaggle.com/avikumart) 
-""")
         
+       if prediction == 0:
+           st.write(f"The severity prediction is fatal injury⚠")
+       elif prediction == 1:
+           st.write(f"The severity prediction is serious injury")
+       else:
+           st.write(f"The severity prediction is slight injury")
+        
+       st.write("Developed By: Avi kumar Talaviya")
+       st.markdown("""Reach out to me on: [Twitter](https://twitter.com/avikumart_) |
+       [Linkedin](https://www.linkedin.com/in/avi-kumar-talaviya-739153147/) |
+       [Kaggle](https://www.kaggle.com/avikumart) 
+       """)
+
+
 a,b,c = st.columns([0.2,0.6,0.2])
 with b:
  st.image("banner-picture.jpeg", use_column_width=True)
@@ -123,3 +124,4 @@ st.markdown("Please find GitHub repository link of project: [Click Here](https:/
 # run the main function        
 if __name__ == '__main__':
   main()
+
